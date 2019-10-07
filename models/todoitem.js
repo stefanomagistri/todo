@@ -1,14 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   const TodoItem = sequelize.define('TodoItem', {
-    todoId: {
-      type: Sequelize.INTEGER,
-      onDelete: 'CASCADE',
-      references: {
-        model: 'Todos',
-        key: 'id',
-        as: 'todoId',
-      },
-    },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
